@@ -2,12 +2,17 @@ package Opg1;
 
 public class TV {
 
-    private boolean powerOn;
-    private int channel;
-    private int volume;
+    private boolean powerOn = true;
+    private int channel = 1;
+    private int volume = 0;
+
+    public int getChannel() {
+        return channel;
+    }
 
     public TV() {
-
+        this.channel = 1;
+        this.volume = 0;
     }
 
     public void turnOn() {

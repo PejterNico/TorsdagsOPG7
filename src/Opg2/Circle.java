@@ -6,12 +6,17 @@ public class Circle {
 
     private double radius;
 
-    public Circle(double radius) {
-        this.radius = radius;
+    public Circle() {
+        this.radius = 1;
     }
 
-    public void setRadius(int radius) {
-        this.radius = radius;
+   public void setRadius(double radius) throws IllegalArgumentException {
+        if (radius > 0) {
+            this.radius = radius;
+            getAreal();
+        } else {
+            throw new IllegalArgumentException("Dit tal er minus skriv et positivt tal");
+        }
     }
 
     public double getAreal (){
